@@ -18,8 +18,9 @@
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
     <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script>
 
-    <script src="script.js"></script>
+   
 </head>
 
 <body>
@@ -66,21 +67,21 @@
                         <form>
                             <div class="form-group">
                                 <label for="">Train Name</label>
-                                <input type="text" class="form-control" name="trainNameInput">
+                                <input type="text" class="form-control" id="trainNameInput">
                             </div>
                             <div class="form-group">
                                 <label for="">Destination</label>
-                                <input type="text" class="form-control" name="destinationInput">
+                                <input type="text" class="form-control" id="destinationInput">
                             </div>
                             <div class="form-group">
                                 <label for="">First Train Time (HH:mm - Military Time)</label>
-                                <input type="text" class="form-control" name="firstTrainInput">
+                                <input type="text" class="form-control" id="firstTrainInput">
                             </div>
                             <div class="form-group">
                                 <label for="">Frequency (min)</label>
-                                <input type="text" class="form-control" name="frequencyInput">
+                                <input type="text" class="form-control" id="frequencyInput">
                             </div>
-                            <button type="submit" class="btn btn-secondary" id="addTrainBtn">Add Train</button>
+                            <button type="button" class="btn btn-secondary" id="addTrainBtn">Add Train</button>
                         </form>
                     </div>
                 </div>
@@ -88,6 +89,7 @@
         </div>
     </div>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
