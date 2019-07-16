@@ -25,6 +25,7 @@ var firebaseConfig = {
           frequency: frequency
       }
 
+
       alert("Train was Added")
 
       console.log(trainName)
@@ -32,3 +33,10 @@ var firebaseConfig = {
       console.log(firstTrain)
       console.log(frequency)
   });
+
+  trainData.ref().on("child_added", function(snapshot){
+      var name = snapshot.val().name;
+      var destination = snapshot.val().destination;
+      var firstTrain = snapshot.val().firstTrain;
+      var frequency = snapshot.val().frequency;
+  })
