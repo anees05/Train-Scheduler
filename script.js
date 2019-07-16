@@ -1,11 +1,11 @@
 var firebaseConfig = {
-    apiKey: "AIzaSyA6Nct5KirJY_353jJgj5jMeOftxrVNVfw",
-    authDomain: "fb-demo-8143d.firebaseapp.com",
-    databaseURL: "https://fb-demo-8143d.firebaseio.com",
-    projectId: "fb-demo-8143d",
-    storageBucket: "",
-    messagingSenderId: "263940671261",
-    appId: "1:263940671261:web:0b6e45eb91b34a9a"
+    apiKey: "AIzaSyASGSvmgLbH2Se0WqAfvV_XquBunF85bV0",
+    authDomain: "fb-class-32832.firebaseapp.com",
+    databaseURL: "https://fb-class-32832.firebaseio.com",
+    projectId: "fb-class-32832",
+    storageBucket: "fb-class-32832.appspot.com",
+    messagingSenderId: "63030322361",
+    appId: "1:63030322361:web:c1394e44c8970155"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
@@ -13,6 +13,7 @@ var firebaseConfig = {
   var trainData = firebase.database();
 
   $("#addTrainBtn").on("click", function(){
+      event.preventDefault()
       var trainName = $("#trainNameInput").val().trim()
       var destination = $("#destinationInput").val().trim()
       var firstTrain = $("#firstTrainInput").val().trim()
@@ -25,6 +26,7 @@ var firebaseConfig = {
           frequency: frequency
       }
 
+      trainData.ref().push(newTrain);
 
       alert("Train was Added")
 
